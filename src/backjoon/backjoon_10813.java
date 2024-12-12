@@ -1,5 +1,9 @@
-import java.io.*;
-import java.util.*;
+package backjoon;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 /**
  * 문제
@@ -21,10 +25,43 @@ import java.util.*;
  * 출력
  * 1번 바구니부터 N번 바구니에 들어있는 공의 번호를 공백으로 구분해 출력한다.
  */
-public class Main {
+public class backjoon_10813 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader( System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
+        StringBuilder sb = new StringBuilder();
+
+        // 바구니 개수
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+        int[] basket = new int[N+1];
+
+        // 바구니에 공을 넣는다.
+        for (int i = 1; i <= N; i++) {
+            basket[i] = i;
+        }
+
+        // 공을 바꾸는 방법은 총 M가지
+        int i,j,tmp;
+        while (M-- >0){
+            st = new StringTokenizer(br.readLine());
+            i = Integer.parseInt(st.nextToken());
+            j = Integer.parseInt(st.nextToken());
+
+            // i와 j번째 공을 바꾼다.
+            tmp = basket[i];
+            basket[i] = basket[j];
+            basket[j] = tmp;
+        }
+
+        for (int k = 1; k <= N; k++) {
+            sb.append(basket[k]);
+            if(k<N){
+                sb.append(" ");
+            }
+        }
+
+        System.out.println(sb);
 
     }
 
