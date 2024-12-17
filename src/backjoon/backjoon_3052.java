@@ -50,6 +50,4 @@ public class backjoon_3052 {
         System.out.println(map.size());
     }
 
-
-
 }
