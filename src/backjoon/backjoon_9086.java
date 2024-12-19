@@ -1,13 +1,15 @@
+package backjoon;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
-public class Main {
+public class backjoon_9086 {
 
     /**
-     * 9086 - 문자열
+     * 9086 - 문자열 
      * @param args
      * @throws IOException
      */
