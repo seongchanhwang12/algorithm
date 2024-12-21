@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 public class backjoon_9086 {
 
     /**
-     * 9086 - 문자열 
+     * 9086 - 문자열
      * @param args
      * @throws IOException
      */
