@@ -1,7 +1,8 @@
+package backjoon;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 /**
  * 알파벳 소문자로만 이루어진 단어 S가 주어진다.
@@ -9,8 +10,7 @@ import java.util.Arrays;
  *
  * 소요된 시간 : 23:46
  */
-public class Main {
-
+public class backjoon_10809 {
     public static void main(String[] args) throws IOException {
         // N개의 숫자 공백 없이
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
