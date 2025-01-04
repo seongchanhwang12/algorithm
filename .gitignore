@@ -25,10 +25,21 @@ bin/
 ### VS Code ###
 .vscode/
 
+# OS별 불필요 파일 무시
 ### Mac OS ###
 .DS_Store
+Thumbs.db
 
 # IntelliJ IDEA settings
 .idea/
 *.iml
+
+# Gradle 관련 캐시 파일 무시
+.gradle/
+
+# 빌드 출력물 무시
+/build/
+
+# 로그 파일 무시
+*.log
 
