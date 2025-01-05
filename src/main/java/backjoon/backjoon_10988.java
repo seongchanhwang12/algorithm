@@ -1,9 +1,16 @@
+package backjoon;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Main {
+public class backjoon_10988 {
 
+    /**
+     * 풀이 1
+     * @param args
+     * @throws IOException
+     */
     public static void main2(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
@@ -17,6 +24,11 @@ public class Main {
         }
     }
 
+    /**
+     * 풀이 2
+     * @param args
+     * @throws IOException
+     */
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str = br.readLine();
