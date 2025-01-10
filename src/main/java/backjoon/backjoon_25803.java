@@ -1,7 +1,7 @@
 package backjoon;
 
 
-public class Main {
+public class backjoon_25803 {
 
     public static void main(String[] args) {
 
