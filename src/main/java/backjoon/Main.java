@@ -1,26 +1,40 @@
 package backjoon;
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb= new StringBuilder();
 
-        String s = "         ,r'\"7\n" +
-                   "r`-_   ,'  ,/\n" +
-                   " \\. \". L_r'\n" +
-                   "   `~\\/\n" +
-                   "      |\n" +
-                   "      |";
+        String[] size = br.readLine().split(" ");
+        int row = Integer.parseInt(size[0]);
+        int col = Integer.parseInt(size[1]);
 
-        System.out.println(s);
+        String[][] matrixA, matrixB;
+        matrixA = createMatrix(row, col, br);
+        matrixB = createMatrix(row, col, br);
 
+        for (int r = 0; r < row; r++) {
+            for (int c = 0; c < col; c++) {
+                sb.append(Integer.parseInt(matrixA[r][c]) + Integer.parseInt(matrixB[r][c])).append(" ");
+            }
+            sb.append("\n");
+        }
 
-        // 제어 문자
-        String escape = "\\";
-        String escape2 ="\"";
-        String escape3 = "\n";
+        System.out.println(sb);
+    }
 
-
+    public static String [][] createMatrix(int row, int col, BufferedReader br ) throws IOException {
+        String [][] result = new String [row][col];
+        for (int i = 0; i < row; i++) {
+            result[i] = br.readLine().split(" ");
+        }
+        return result;
     }
 }
